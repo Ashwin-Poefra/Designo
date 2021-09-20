@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export const HeaderContainer = styled.header`
   max-width: 100%;
   min-height: 0rem;
-  background-color: yellow;
   padding: 0rem 1rem;
+  position: relative;
   z-index: 1000;
+  background-color: var(--color-pry-300);
 `;
 export const HeaderWrap = styled.div`
   max-width: var(--max-container);
   min-height: 4rem;
   margin: var(--center-container);
-  background-color: white;
   display: flex;
   align-items: center;
 
@@ -25,11 +25,15 @@ export const HeaderLogoLink = styled(Link)``;
 export const HeaderLogo = styled.img`
   max-width: 12.25rem;
   height: auto;
+  @media screen and (max-width: 686px) {
+    max-width: 10.25rem;
+  }
 `;
+
 export const HeaderMenu = styled.nav`
   flex: 5;
-  /* background-color: green; */
 `;
+
 export const HeaderMobileNav = styled.div`
   display: none;
 
