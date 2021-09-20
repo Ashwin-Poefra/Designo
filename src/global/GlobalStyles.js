@@ -6,19 +6,19 @@ export const GlobalStyles = createGlobalStyle`
     // TODO: ROOT VALUES
     :root {
         // COLORS
-        --color-pry-100: hsl(0, 0%, 95%);
-        --color-pry-200: hsl(231, 69%, 60%);
-        --color-pry-300: hsl(0, 94%, 66%);
-        --color-sec-100: hsl(229, 31%, 21%);
-        --color-sec-200: hsl(229, 8%, 60%);
-        --color-sec-300: hsla(229, 31%, 21%, 0.714);
-        --color-sec-400: hsla(229, 31%, 21%, 0.234);
+        --color-pry-100: hsl(11, 73%, 66%);
+        --color-pry-200: hsl(270, 3%, 11%);
+        --color-pry-300: hsl(0, 0%, 100%);
+        --color-sec-100: hsl(11, 100%, 80%);
+        --color-sec-200: hsl(264, 5%, 20%);
+        --color-sec-300: hsl(210, 17%, 95%);
+
         // FONTS
-        --font-pry-100: 'Rubik', sans-serif;
+        --font-pry-100: 'Jost', sans-serif;
         --font-weight-100: 400;
-        --font-weight-200: 500;
+        --font-weight-200: 500; 
         // WIDTH
-        --max-container: 69rem;
+        --max-container: 69.4375rem;
         --center-container: 0 auto;
         //BORDER
         --border-radius: 0.3125rem;
@@ -50,8 +50,8 @@ export const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         font-family: var(--font-pry-100);
         font-weight: var(--font-weight-100);
-        background-color: var(--color-pry-100);
-        color: var(--color-sec-100);
+        background-color: var(--color-pry-300));
+        color: var(--color-pry-200);
     }
     ///////////////////////////////////////////////////////
     //TODO: TYPOGRAPHY

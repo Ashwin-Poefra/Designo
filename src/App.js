@@ -1,12 +1,13 @@
 import React from "react";
 import { GlobalStyles } from "./global/GlobalStyles";
+import Header from "./components/global/Header/Header";
+import { menuData } from "./data/global/MenuData";
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <h1>Working</h1>
-      <p>in progress</p>
+      <Header menuData={menuData} />
     </>
   );
 };
