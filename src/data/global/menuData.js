@@ -58,7 +58,7 @@ export const menuData = {
   menu: [
     {
       title: "our company",
-      link: "/our-company",
+      link: "/about",
     },
     {
       title: "locations",

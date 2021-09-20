@@ -1,19 +1,54 @@
-import React from "react";
-import { HeaderContainer, HeaderWrap, HeaderLogoWrap, HeaderLogo, HeaderMenu, HeaderMenuItems, HeaderMenuItem } from "./HeaderStyles";
+import React, { useState } from "react";
+import {
+  HeaderContainer,
+  HeaderWrap,
+  HeaderLogoWrap,
+  HeaderLogoLink,
+  HeaderLogo,
+  HeaderMenu,
+  HeaderMobileNav,
+  MobileNav,
+  HeaderMenuItems,
+  HeaderMenuItem,
+} from "./HeaderStyles";
 
-const Header = () => {
+const Header = ({ menuData }) => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const handleNavOpen = () => {
+    setNavOpen(!navOpen);
+  }
+
   return (
     <>
       <HeaderContainer>
         <HeaderWrap>
           <HeaderLogoWrap>
-            <HeaderLogoLink>
-              <HeaderLogo></HeaderLogo>
+            <HeaderLogoLink to={menuData.homeLink}>
+              <HeaderLogo
+                src={menuData.header.headerLogo}
+                alt={menuData.header.headLogoAlt}
+              ></HeaderLogo>
             </HeaderLogoLink>
           </HeaderLogoWrap>
           <HeaderMenu>
-            <HeaderMenuItems>
-              <HeaderMenuItem to="/">our company</HeaderMenuItem>
+            <HeaderMobileNav>
+              <MobileNav onClick={handleNavOpen}>
+                {navOpen ? (
+                  <i class="fas fa-times"></i>
+                ) : (
+                  <i className="fas fa-bars"></i>
+                )}
+              </MobileNav>
+            </HeaderMobileNav>
+            <HeaderMenuItems navOpen={navOpen}>
+              {menuData.menu.map((menu, index) => {
+                return (
+                  <HeaderMenuItem key={index} to={menu.link}>
+                    {menu.title}
+                  </HeaderMenuItem>
+                );
+              })}
             </HeaderMenuItems>
           </HeaderMenu>
         </HeaderWrap>

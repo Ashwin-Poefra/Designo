@@ -50,25 +50,27 @@ export const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         font-family: var(--font-pry-100);
         font-weight: var(--font-weight-100);
-        background-color: var(--color-pry-300));
+        background-color: var(--color-pry-300);
         color: var(--color-pry-200);
     }
     ///////////////////////////////////////////////////////
     //TODO: TYPOGRAPHY
     a {
-        color: var(--color-sec-100);
-        font-weight: var(--font-weight-200);
+        color: var(--color-pry-200);
+        font-weight: var(--font-weight-100);
         font-size: 0.9rem;
+        letter-spacing: 0.1rem;
         &:hover {
             transition: var(--transition);
-            color: var(--color-pry-300);
+            color: var(--color-sec-200);
+            border-bottom: 0.1rem solid var(--color-sec-200);
         }
     }
     
     p {
         font-size: 0.9rem;
         line-height: 1.5625rem;
-        color: var(--color-sec-300);
+        color: var(--color-pry-200);
         font-weight: var(--font-weight-100);
         @media ${QUERIES.tabletMini} {
             font-size: 1 rem;
@@ -113,4 +115,11 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  max-width: var(--max-container);
+  margin: var(--center-container);
+  min-height: 40rem;
+  background-color: var(--color-pry-100);
+  color: white;
+  text-align: center;
+`;

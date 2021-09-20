@@ -1,9 +1,12 @@
 import React from 'react'
+import { Main } from "../global/GlobalStyles";
 
 const Home = () => {
     return (
         <>
-            Homepage
+        <Main>
+            <h1>Home Page</h1>
+        </Main>
         </>
     )
 }
