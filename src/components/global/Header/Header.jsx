@@ -13,7 +13,7 @@ import {
 } from "./HeaderStyles";
 import Overlay from "../Overlay/Overlay";
 
-const Header = ({ menuData }) => {
+const Header = ({ data }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   //TODO: Handle => Change nav state on click (true === open || false === close)
@@ -39,10 +39,10 @@ const Header = ({ menuData }) => {
       <HeaderContainer className="header">
         <HeaderWrap>
           <HeaderLogoWrap>
-            <HeaderLogoLink to={menuData.homeLink}>
+            <HeaderLogoLink to={data.homeLink}>
               <HeaderLogo
-                src={menuData.header.headerLogo}
-                alt={menuData.header.headLogoAlt}
+                src={data.header.headerLogo}
+                alt={data.header.headLogoAlt}
                 onClick={handleMenuClick}
               ></HeaderLogo>
             </HeaderLogoLink>
@@ -58,7 +58,7 @@ const Header = ({ menuData }) => {
               </MobileNav>
             </HeaderMobileNav>
             <HeaderMenuItems navOpen={navOpen}>
-              {menuData.menu.map((menu, index) => {
+              {data.menu.map((menu, index) => {
                 return (
                   <HeaderMenuItem
                     key={index}

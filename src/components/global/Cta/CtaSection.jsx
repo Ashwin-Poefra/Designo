@@ -11,31 +11,31 @@ import {
 } from "./CtaSectionStyles";
 import { handleScrollToTop } from "../../../helpers/Config";
 
-const CtaSection = ({ ctaData }) => {
+const CtaSection = ({ data }) => {
   return (
     <>
       <CtaContainer>
         <CtaWrap>
           <CtaContent>
-            <CtaHeader>{ctaData.header}</CtaHeader>
-            <CtaSubHeader>{ctaData.subHeader}</CtaSubHeader>
+            <CtaHeader>{data.header}</CtaHeader>
+            <CtaSubHeader>{data.subHeader}</CtaSubHeader>
             <MobileButton>
               <Button
-                link={ctaData.button.link}
+                link={data.button.link}
                 primary="true"
                 click={handleScrollToTop}
               >
-                {ctaData.button.title}
+                {data.button.title}
               </Button>
             </MobileButton>
           </CtaContent>
           <CtaButton>
             <Button
-              link={ctaData.button.link}
+              link={data.button.link}
               primary="true"
               click={handleScrollToTop}
             >
-              {ctaData.button.title}
+              {data.button.title}
             </Button>
           </CtaButton>
         </CtaWrap>

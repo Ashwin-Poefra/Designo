@@ -1,11 +1,13 @@
 import React from 'react'
+import HeroSection from '../components/Main/Home/HeroSection';
 import { Main } from "../global/GlobalStyles";
+import { homeData } from '../data/pages/Home/HomeData';
 
 const Home = () => {
     return (
         <>
         <Main>
-            <h1>Home Page</h1>
+            <HeroSection data={homeData}/>
         </Main>
         </>
     )

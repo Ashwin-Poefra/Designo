@@ -75,9 +75,17 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: var(--font-weight-100);
     }
 
-    h2 {
+    h1, h2 {
         font-size: 2rem;
         line-height: 2.25rem;
+
+        @media ${QUERIES.tabletMini} {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
+
+    h2 {
         @media ${QUERIES.tabletMini} {
             font-size: 2.5rem;
             line-height: 2.5rem;
@@ -85,11 +93,4 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const Main = styled.main`
-  max-width: var(--max-container);
-  margin: var(--center-container);
-  min-height: 100rem;
-  background-color: var(--color-pry-100);
-  color: white;
-  text-align: center;
-`;
+export const Main = styled.main``;

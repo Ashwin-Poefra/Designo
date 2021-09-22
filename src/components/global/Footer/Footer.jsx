@@ -22,7 +22,7 @@ import {
 } from "./FooterStyles";
 import { handleScrollToTop } from "../../../helpers/Config";
 
-const Footer = ({ menuData }) => {
+const Footer = ({ data }) => {
   return (
     <>
       <FooterContainer>
@@ -31,17 +31,17 @@ const Footer = ({ menuData }) => {
           <FooterMenu>
             <FooterLogoWrap>
               <FooterLogoLink
-                to={menuData.homeLink}
+                to={data.homeLink}
                 onClick={handleScrollToTop}
               >
                 <FooterLogo
-                  src={menuData.footer.footerLogo}
-                  alt={menuData.footer.footerLogoAlt}
+                  src={data.footer.footerLogo}
+                  alt={data.footer.footerLogoAlt}
                 ></FooterLogo>
               </FooterLogoLink>
             </FooterLogoWrap>
             <FooterNavWrap>
-              {menuData.menu.map((menu, index) => {
+              {data.menu.map((menu, index) => {
                 return (
                   <FooterNav key={index}>
                     <FooterNavItem to={menu.link} onClick={handleScrollToTop}>
@@ -54,21 +54,21 @@ const Footer = ({ menuData }) => {
           </FooterMenu>
           <FooterInformation>
             <FooterAddressWrap>
-              <FooterAddress>{menuData.address.office}</FooterAddress>
-              <FooterAddress>{menuData.address.street}</FooterAddress>
-              <FooterAddress>{menuData.address.city}</FooterAddress>
+              <FooterAddress>{data.address.office}</FooterAddress>
+              <FooterAddress>{data.address.street}</FooterAddress>
+              <FooterAddress>{data.address.city}</FooterAddress>
             </FooterAddressWrap>
             <FooterContactWrap>
-              <FooterContactTitle>{menuData.contact.title}</FooterContactTitle>
-              <FooterContact href={menuData.contact.phoneLink}>
-                P: {menuData.contact.phone}
+              <FooterContactTitle>{data.contact.title}</FooterContactTitle>
+              <FooterContact href={data.contact.phoneLink}>
+                P: {data.contact.phone}
               </FooterContact>
-              <FooterContact href={menuData.contact.emailLink}>
-                M: {menuData.contact.email}
+              <FooterContact href={data.contact.emailLink}>
+                M: {data.contact.email}
               </FooterContact>
             </FooterContactWrap>
             <FooterSocialWrap>
-              {menuData.social.map((social, index) => {
+              {data.social.map((social, index) => {
                 return (
                   <FooterSocial
                     key={index}

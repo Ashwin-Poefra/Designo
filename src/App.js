@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Router>
       <GlobalStyles />
-      <Header menuData={menuData} />
+      <Header data={menuData} />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -30,8 +30,8 @@ const App = () => {
           <Contact />
         </Route>
       </Switch>
-      <CtaSection ctaData={ctaData}/>
-      <Footer menuData={menuData} />
+      <CtaSection data={ctaData}/>
+      <Footer data={menuData} />
     </Router>
   );
 };
