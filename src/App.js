@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GlobalStyles } from "./global/GlobalStyles";
 import Header from "./components/global/Header/Header";
+import Footer from "./components/global/Footer/Footer";
 import { menuData } from "./data/global/menuData";
 
 import Home from "./pages/Home";
@@ -28,6 +29,7 @@ const App = () => {
           <Contact />
         </Route>
       </Switch>
+      <Footer menuData={menuData} />
     </Router>
   );
 };
