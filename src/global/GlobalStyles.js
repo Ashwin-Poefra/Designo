@@ -88,7 +88,7 @@ export const GlobalStyles = createGlobalStyle`
 export const Main = styled.main`
   max-width: var(--max-container);
   margin: var(--center-container);
-  min-height: 30rem;
+  min-height: 100rem;
   background-color: var(--color-pry-100);
   color: white;
   text-align: center;

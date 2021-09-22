@@ -3,9 +3,8 @@ import ctaBackground from "../../../assets/images/shared/desktop/bg-pattern-call
 import { QUERIES } from "../../../helpers/MediaQueries";
 
 export const CtaContainer = styled.section`
-  background-color: red;
   max-width: 100%;
-  min-height: 10rem;
+  min-height: 19.625rem;
   padding: 1rem;
 
   h2,
@@ -13,10 +12,11 @@ export const CtaContainer = styled.section`
     color: var(--color-pry-300);
   }
 `;
+
 export const CtaWrap = styled.div`
   background-color: var(--color-pry-100);
   background-image: url(${ctaBackground});
-  background-position: -34rem -9rem;
+  background-position: -16rem -5rem;
   background-repeat: no-repeat;
   max-width: var(--max-container);
   min-height: 23.6875rem;
@@ -37,6 +37,10 @@ export const CtaWrap = styled.div`
     justify-content: center;
   }
 
+  @media ${QUERIES.mobile} {
+    background-position: 1rem -5rem;
+  }
+
   @media ${QUERIES.tabletMini} {
     min-height: 18.25rem;
     flex-direction: row;
@@ -47,6 +51,7 @@ export const CtaWrap = styled.div`
 
   @media ${QUERIES.tablet} {
     padding: 0rem 5.8125rem;
+    background-position: 15rem -9rem;
   }
 `;
 
@@ -59,6 +64,7 @@ export const CtaContent = styled.div`
     justify-content: flex-start;
   }
 `;
+
 export const CtaHeader = styled.h2`
   max-width: 24.75rem;
   margin: var(--center-container);
@@ -68,6 +74,7 @@ export const CtaHeader = styled.h2`
     margin: 0;
   }
 `;
+
 export const CtaSubHeader = styled.p`
   margin: 1.5rem auto 2rem auto;
   max-width: 26.75rem;
@@ -77,11 +84,13 @@ export const CtaSubHeader = styled.p`
     margin-top: 1.5rem;
   }
 `;
+
 export const MobileButton = styled.div`
   @media ${QUERIES.tabletMini} {
     display: none;
   }
 `;
+
 export const CtaButton = styled.div`
   display: none;
   align-items: flex-end;
