@@ -36,7 +36,7 @@ const Header = ({ menuData }) => {
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer className="header">
         <HeaderWrap>
           <HeaderLogoWrap>
             <HeaderLogoLink to={menuData.homeLink}>

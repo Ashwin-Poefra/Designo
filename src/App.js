@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GlobalStyles } from "./global/GlobalStyles";
 import Header from "./components/global/Header/Header";
 import Footer from "./components/global/Footer/Footer";
+import CtaSection from "./components/global/Cta/CtaSection";
 import { menuData } from "./data/global/menuData";
-
+import { ctaData } from "./data/global/CtaData";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -29,6 +30,7 @@ const App = () => {
           <Contact />
         </Route>
       </Switch>
+      <CtaSection ctaData={ctaData}/>
       <Footer menuData={menuData} />
     </Router>
   );

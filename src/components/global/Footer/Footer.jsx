@@ -20,6 +20,7 @@ import {
   FooterSocial,
   Social,
 } from "./FooterStyles";
+import { handleScrollToTop } from "../../../helpers/Config";
 
 const Footer = ({ menuData }) => {
   return (
@@ -29,7 +30,10 @@ const Footer = ({ menuData }) => {
           <FooterSpace />
           <FooterMenu>
             <FooterLogoWrap>
-              <FooterLogoLink to={menuData.homeLink}>
+              <FooterLogoLink
+                to={menuData.homeLink}
+                onClick={handleScrollToTop}
+              >
                 <FooterLogo
                   src={menuData.footer.footerLogo}
                   alt={menuData.footer.footerLogoAlt}
@@ -40,7 +44,9 @@ const Footer = ({ menuData }) => {
               {menuData.menu.map((menu, index) => {
                 return (
                   <FooterNav key={index}>
-                    <FooterNavItem to={menu.link}>{menu.title}</FooterNavItem>
+                    <FooterNavItem to={menu.link} onClick={handleScrollToTop}>
+                      {menu.title}
+                    </FooterNavItem>
                   </FooterNav>
                 );
               })}

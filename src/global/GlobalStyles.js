@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-// import { QUERIES } from "../helpers/MediaQueries";
+import { QUERIES } from "../helpers/MediaQueries";
 
 export const GlobalStyles = createGlobalStyle`
     ///////////////////////////////////////////////////////
@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
         --max-container: 69.4375rem;
         --center-container: 0 auto;
         //BORDER
-        --border-radius: 0.3125rem;
+        --border-radius: 0.5rem;
         //ANIMATION 
         --transition: 0.25s ease-in-out;
     }
@@ -73,6 +73,15 @@ export const GlobalStyles = createGlobalStyle`
         line-height: 1.625rem;
         color: var(--color-pry-200);
         font-weight: var(--font-weight-100);
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+        @media ${QUERIES.tabletMini} {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
     }
 `;
 

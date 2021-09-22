@@ -127,6 +127,7 @@ export const FooterInformation = styled.div`
 
   @media ${QUERIES.tabletMini} {
     flex-direction: row;
+    padding-bottom: 3.8rem;
 
     & > * {
       flex: 1;
