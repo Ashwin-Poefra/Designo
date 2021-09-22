@@ -54,10 +54,10 @@ const Footer = ({ menuData }) => {
             </FooterAddressWrap>
             <FooterContactWrap>
               <FooterContactTitle>{menuData.contact.title}</FooterContactTitle>
-              <FooterContact to={menuData.contact.phoneLink}>
+              <FooterContact href={menuData.contact.phoneLink}>
                 P: {menuData.contact.phone}
               </FooterContact>
-              <FooterContact to={menuData.contact.emailLink}>
+              <FooterContact href={menuData.contact.emailLink}>
                 M: {menuData.contact.email}
               </FooterContact>
             </FooterContactWrap>
@@ -66,7 +66,8 @@ const Footer = ({ menuData }) => {
                 return (
                   <FooterSocial
                     key={index}
-                    to={social.link}
+                    href={social.link}
+                    target="_blank"
                     aria-label={social.label}
                   >
                     <Social src={social.icon} alt={social.label}></Social>

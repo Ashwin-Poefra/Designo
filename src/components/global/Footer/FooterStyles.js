@@ -91,13 +91,22 @@ export const FooterAddressWrap = styled.div`
 export const FooterAddress = styled.p``;
 export const FooterContactWrap = styled.div``;
 export const FooterContactTitle = styled.p``;
-export const FooterContact = styled(Link)``;
+export const FooterContact = styled.a`
+  &:hover {
+    border: none;
+    transition: var(--transition);
+    color: var(--color-pry-100) !important;
+  }
+`;
 
 export const FooterSocialWrap = styled.div`
   flex-direction: row;
   width: 100%;
 `;
-export const FooterSocial = styled.div`
+export const FooterSocial = styled.a`
   margin: 0rem 0.5rem;
+  &:hover {
+    border: none;
+  }
 `;
 export const Social = styled.img``;
