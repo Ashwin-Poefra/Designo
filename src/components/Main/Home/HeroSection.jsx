@@ -6,7 +6,6 @@ import {
   HeroHeader,
   HeroSubHeader,
   HeroImageContainer,
-  HeroImageWrap,
   HeroImage,
 } from "./HeroSectionStyles";
 import Button from "../../../components/global/Button/Button";

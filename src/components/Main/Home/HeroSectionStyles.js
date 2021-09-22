@@ -41,8 +41,5 @@ export const HeroSubHeader = styled.p`
 export const HeroImageContainer = styled.div`
   /* background-color: gray; */
 `;
-export const HeroImageWrap = styled.div`
-  background-color: black;
-`;
 export const HeroImage = styled.img`
 `;
