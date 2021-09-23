@@ -6,14 +6,15 @@ import {
   HeroHeader,
   HeroSubHeader,
   HeroImageContainer,
-  HeroImage,
+  HeroImageMobile,
+  HeroImageDesktop,
 } from "./HeroSectionStyles";
 import Button from "../../../components/global/Button/Button";
 import { handleScrollToTop } from "../../../helpers/Config";
 
 const HeroSection = ({ data }) => {
   console.log(data);
-  return ( 
+  return (
     <>
       <HeroContainer>
         <HeroWrap>
@@ -21,18 +22,22 @@ const HeroSection = ({ data }) => {
             <HeroHeader>{data.header}</HeroHeader>
             <HeroSubHeader>{data.subHeader}</HeroSubHeader>
             <Button
-              primary={true}
-              link={data.button.link}
               click={handleScrollToTop}
+              primary="true"
+              link={data.button.link}
             >
               {data.button.title}
             </Button>
           </HeroContent>
           <HeroImageContainer>
-            <HeroImage
-              src={data.image.src}
+            <HeroImageMobile
+              src={data.image.srcMobile}
               alt={data.image.imageAlt}
-            ></HeroImage>
+            ></HeroImageMobile>
+            <HeroImageDesktop
+              src={data.image.srcDesktop}
+              alt={data.image.imageAlt}
+            ></HeroImageDesktop>
           </HeroImageContainer>
         </HeroWrap>
       </HeroContainer>

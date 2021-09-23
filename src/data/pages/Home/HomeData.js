@@ -1,4 +1,5 @@
-import phone from "../../../assets/images/home/desktop/mobile-hero-phone.png"
+import phoneMobile from "../../../assets/images/home/desktop/mobile-hero-image.png"
+import phoneDesktop from "../../../assets/images/home/desktop/desktop-hero-image.png";
 
 export const homeData = {
   header: "Award-winning custom designs and digital branding solutions",
@@ -9,7 +10,8 @@ export const homeData = {
     link: "/about",
   },
   image: {
-      src: phone,
+      srcMobile: phoneMobile,
+      srcDesktop: phoneDesktop,
       imageAlt: "a mobile phone displaying an animated graphics"
   }
 };
