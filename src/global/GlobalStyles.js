@@ -91,6 +91,12 @@ export const GlobalStyles = createGlobalStyle`
             line-height: 2.5rem;
         }
     }
+
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        font-weight: var(--font-weight-100);
+    }
 `;
 
 export const Main = styled.main``;

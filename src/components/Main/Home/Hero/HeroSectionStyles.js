@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { QUERIES } from "../../../helpers/MediaQueries";
-import heroBackground from "../../../assets/images/home/desktop/bg-pattern-hero-home.svg";
+import { QUERIES } from "../../../../helpers/MediaQueries";
+import heroBackground from "../../../../assets/images/home/desktop/bg-pattern-hero-home.svg";
 
 export const HeroContainer = styled.section`
   max-width: 100%;
@@ -87,7 +87,7 @@ export const HeroImageContainer = styled.div`
   }
 `;
 export const HeroImageMobile = styled.img`
-  box-shadow: 1.2rem -0.6rem 2rem hsla(0, 0%, 0%, 0.431);
+  box-shadow: 1.2rem -0.6rem 2rem hsla(0, 0%, 0%, 0.331);
   border-radius: 2.2rem 2.2rem 0rem 0rem;
 
   @media ${QUERIES.tablet} {
@@ -95,6 +95,8 @@ export const HeroImageMobile = styled.img`
   }
 `;
 export const HeroImageDesktop = styled.img`
+  box-shadow: 1.2rem -0.6rem 2rem hsla(0, 0%, 0%, 0.331);
+  border-radius: 2.2rem 2.2rem 0rem 0rem;
   display: none;
   height: 33rem;
   max-width: auto;

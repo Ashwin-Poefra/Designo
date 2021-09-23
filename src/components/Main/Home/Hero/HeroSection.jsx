@@ -9,8 +9,8 @@ import {
   HeroImageMobile,
   HeroImageDesktop,
 } from "./HeroSectionStyles";
-import Button from "../../../components/global/Button/Button";
-import { handleScrollToTop } from "../../../helpers/Config";
+import Button from "../../../../components/global/Button/Button";
+import { handleScrollToTop } from "../../../../helpers/Config";
 
 const HeroSection = ({ data }) => {
   console.log(data);
