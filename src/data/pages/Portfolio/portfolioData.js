@@ -1,0 +1,197 @@
+import blogr from "../../../assets/images/web-design/desktop/image-blogr.jpg";
+import builder from "../../../assets/images/web-design/desktop/image-builder.jpg";
+import camp from "../../../assets/images/web-design/desktop/image-camp.jpg";
+import express from "../../../assets/images/web-design/desktop/image-express.jpg";
+import photon from "../../../assets/images/web-design/desktop/image-photon.jpg";
+import transfer from "../../../assets/images/web-design/desktop/image-transfer.jpg";
+import webDesign from "../../../assets/images/home/desktop/image-web-design-large.jpg";
+import appDesign from "../../../assets/images/home/desktop/image-app-design.jpg";
+import graphicDesign from "../../../assets/images/home/desktop/image-graphic-design.jpg";
+import airfilter from "../../../assets/images/app-design/desktop/image-airfilter.jpeg";
+import eyecam from "../../../assets/images/app-design/desktop/image-eyecam.jpeg";
+import faceit from "../../../assets/images/app-design/desktop/image-faceit.jpeg";
+import loopstudios from "../../../assets/images/app-design/desktop/image-loopstudios.jpeg";
+import todo from "../../../assets/images/app-design/desktop/image-todo.jpeg";
+import boxedWater from "../../../assets/images/graphic-design/desktop/image-boxed-water.jpg";
+import timBrown from "../../../assets/images/graphic-design/desktop/image-change.jpg";
+import science from "../../../assets/images/graphic-design/desktop/image-science.jpg";
+
+export const portfolioData = [
+  {
+    id: "web-design",
+    header: "web design",
+    subHeader:
+      "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+    image: webDesign,
+    imageAlt: "a web app on a desktop",
+    cta: "view projects",
+    projects: [
+      {
+        image: express,
+        imageAlt: "express website mockup",
+        name: "express",
+        description:
+          "A multi-carrier shipping website for ecommerce businesses",
+      },
+      {
+        image: transfer,
+        imageAlt: "transfer website mockup",
+        name: "transfer",
+        description:
+          "Site for low-cost money transfers and sending money within seconds",
+      },
+      {
+        image: photon,
+        imageAlt: "photon website mockup",
+        name: "photon",
+        description:
+          "A state-of-the-art music player with high-resolution audio and DSP effects",
+      },
+      {
+        image: builder,
+        imageAlt: "builder website mockup",
+        name: "builder",
+        description:
+          "Connects users with local contractors based on their location",
+      },
+      {
+        image: blogr,
+        imageAlt: "blogr website mockup",
+        name: "blogr",
+        description:
+          "Blogr is a platform for creating an online blog or publication",
+      },
+      {
+        image: camp,
+        imageAlt: "camp website mockup",
+        name: "camp",
+        description:
+          "Get expert training in coding, data, design, and digital marketing",
+      },
+    ],
+
+    more: [
+      {
+        id: "app-design",
+        header: "app design",
+        image: appDesign,
+        imageAlt: "a mobile phone",
+      },
+      {
+        id: "graphic-design",
+        header: "graphic design",
+        image: graphicDesign,
+        imageAlt: "a beautiful design",
+      },
+    ],
+  },
+  {
+    id: "app-design",
+    header: "app design",
+    subHeader:
+      "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
+    image: appDesign,
+    imageAlt: "a mobile phone",
+    cta: "view projects",
+    projects: [
+      {
+        image: airfilter,
+        imageAlt: "airfilter mobile app mockup",
+        name: "airfilter",
+        description:
+          "Solving the problem of poor indoor air quality by filtering the air",
+      },
+      {
+        image: eyecam,
+        imageAlt: "eyecam mobile app mockup",
+        name: "eyecam",
+        description:
+          "Product that lets you edit your favorite photos and videos at any time",
+      },
+      {
+        image: faceit,
+        imageAlt: "faceit mobile app mockup",
+        name: "faceit",
+        description:
+          "Get to meet your favorite internet superstar with the faceit app",
+      },
+      {
+        image: todo,
+        imageAlt: "todo mobile app mockup",
+        name: "todo",
+        description:
+          "A todo app that features cloud sync with light and dark mode",
+      },
+      {
+        image: loopstudios,
+        imageAlt: "loopstudios mobile app mockup",
+        name: "loopstudios",
+        description: "A VR experience app made for Loopstudios",
+      },
+    ],
+
+    more: [
+      {
+        id: "web-design",
+        header: "web design",
+        image: webDesign,
+        imageAlt: "a web app",
+      },
+      {
+        id: "graphic-design",
+        header: "graphic design",
+        image: graphicDesign,
+        imageAlt: "a beautiful design",
+      },
+    ],
+  },
+  {
+    id: "graphic-design",
+    header: "graphic design",
+    subHeader:
+      "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
+    image: graphicDesign,
+    imageAlt: "a beautiful design",
+    cta: "view projects",
+    projects: [
+      {
+        image: timBrown,
+        imageAlt: "tim brown book mockup",
+        name: "tim brown",
+        description:
+          "A book cover designed for Tim Brown’s new release, ‘Change’",
+      },
+      {
+        image: boxedWater,
+        imageAlt: "boxed water book mockup",
+        name: "boxed water",
+        description: "A simple packaging concept made for Boxed Water",
+      },
+      {
+        image: science,
+        imageAlt: "science book mockup",
+        name: "science",
+        description:
+          "Get to meet your favorite internet superstar with the faceit app",
+      },
+    ],
+
+    more: [
+      {
+        id: "app-design",
+        header: "app design",
+        image: appDesign,
+        imageAlt: "a mobile phone",
+      },
+      {
+        id: "web-design",
+        header: "web design",
+        image: webDesign,
+        imageAlt: "a web app",
+      },
+    ],
+  },
+];
+
+
+console.log(portfolioData);

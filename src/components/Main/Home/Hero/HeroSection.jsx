@@ -13,7 +13,6 @@ import Button from "../../../../components/global/Button/Button";
 import { handleScrollToTop } from "../../../../helpers/Config";
 
 const HeroSection = ({ data }) => {
-  console.log(data);
   return (
     <>
       <HeroContainer>

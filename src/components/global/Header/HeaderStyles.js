@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
+import { QUERIES } from "../../../helpers/MediaQueries";
 
 export const HeaderContainer = styled.header`
   max-width: 100%;
@@ -8,6 +9,10 @@ export const HeaderContainer = styled.header`
   position: relative;
   z-index: 1000;
   background-color: var(--color-pry-300);
+
+  @media ${QUERIES.mobile} {
+    padding-top: 1rem;
+  }
 `;
 export const HeaderWrap = styled.div`
   max-width: var(--max-container);
