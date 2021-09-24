@@ -8,22 +8,39 @@ import { Link } from "react-router-dom";
 export const CardContainer = styled.section`
   max-width: 100%;
   min-height: 0rem;
-  /* background-color: red; */
-  padding: 4rem 0rem 1rem 0rem;
+  padding: 4rem 1rem 1rem 1rem;
 
   h3,
   p {
     color: var(--color-pry-300);
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: var(--font-weight-200);
+
+    @media ${QUERIES.tabletMini} {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
   }
 `;
 
 export const CardWrap = styled.div`
-  /* background-color: pink; */
   max-width: var(--max-container);
   min-height: 10rem;
   margin: var(--center-container);
+  display: flex;
+  flex-direction: column;
 
-  @media ${QUERIES.desktop} {
+  & > * {
+    min-height: 15.625rem;
+    margin: 1rem 0rem;
+  }
+
+  @media ${QUERIES.tablet} {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
@@ -32,11 +49,15 @@ export const CardWrap = styled.div`
     grid-template-areas:
       "a b"
       "a c";
+
+    & > * {
+      min-height: 0rem;
+      margin: 0rem;
+    }
   }
 `;
 
 export const Card = styled(Link)`
-  /* background-color: white; */
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -56,6 +77,12 @@ export const Card = styled(Link)`
     h3,
     p {
       background-color: transparent;
+    }
+
+    i {
+      transition: var(--transition);
+      transform: translateX(1rem) translateY(-0.1rem);
+      color: var(--color-pry-300);
     }
   }
 
@@ -91,12 +118,15 @@ export const CardOverlay = styled.div`
 `;
 
 export const CardHeader = styled.h3`
-  text-transform: uppercase;
-  font-weight: var(--font-weight-200);
   z-index: 1000;
 `;
 export const CardCta = styled.p`
-  text-transform: uppercase;
   margin: 1rem 2rem;
   z-index: 1000;
+
+  i {
+    font-size: 0.5rem;
+    transform: translateX(0.5rem) translateY(-0.1rem);
+    color: var(--color-pry-100);
+  }
 `;
