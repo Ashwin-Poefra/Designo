@@ -99,4 +99,5 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+`;

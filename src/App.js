@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
+import Portfolio from "./pages/Portfolio";
 
 const App = () => {
   return (
@@ -29,8 +30,11 @@ const App = () => {
         <Route exact path="/contact">
           <Contact />
         </Route>
+        <Route exact path="/portfolio">
+          <Portfolio />
+        </Route>
       </Switch>
-      <CtaSection data={ctaData}/>
+      <CtaSection data={ctaData} />
       <Footer data={menuData} />
     </Router>
   );
