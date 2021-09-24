@@ -7,11 +7,11 @@ import transfer from "../../../assets/images/web-design/desktop/image-transfer.j
 import webDesign from "../../../assets/images/home/desktop/image-web-design-large.jpg";
 import appDesign from "../../../assets/images/home/desktop/image-app-design.jpg";
 import graphicDesign from "../../../assets/images/home/desktop/image-graphic-design.jpg";
-import airfilter from "../../../assets/images/app-design/desktop/image-airfilter.jpeg";
-import eyecam from "../../../assets/images/app-design/desktop/image-eyecam.jpeg";
-import faceit from "../../../assets/images/app-design/desktop/image-faceit.jpeg";
-import loopstudios from "../../../assets/images/app-design/desktop/image-loopstudios.jpeg";
-import todo from "../../../assets/images/app-design/desktop/image-todo.jpeg";
+import airfilter from "../../../assets/images/app-design/desktop/image-airfilter.jpg";
+import eyecam from "../../../assets/images/app-design/desktop/image-eyecam.jpg";
+import faceit from "../../../assets/images/app-design/desktop/image-faceit.jpg";
+import loopstudios from "../../../assets/images/app-design/desktop/image-loopstudios.jpg";
+import todo from "../../../assets/images/app-design/desktop/image-todo.jpg";
 import boxedWater from "../../../assets/images/graphic-design/desktop/image-boxed-water.jpg";
 import timBrown from "../../../assets/images/graphic-design/desktop/image-change.jpg";
 import science from "../../../assets/images/graphic-design/desktop/image-science.jpg";
@@ -25,6 +25,7 @@ export const portfolioData = [
     image: webDesign,
     imageAlt: "a web app on a desktop",
     cta: "view projects",
+    class: "large",
     projects: [
       {
         image: express,
@@ -93,6 +94,7 @@ export const portfolioData = [
     image: appDesign,
     imageAlt: "a mobile phone",
     cta: "view projects",
+    class: "small-1",
     projects: [
       {
         image: airfilter,
@@ -153,6 +155,7 @@ export const portfolioData = [
     image: graphicDesign,
     imageAlt: "a beautiful design",
     cta: "view projects",
+    class: "small-2",
     projects: [
       {
         image: timBrown,
