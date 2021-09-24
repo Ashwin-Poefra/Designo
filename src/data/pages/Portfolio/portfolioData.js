@@ -195,6 +195,3 @@ export const portfolioData = [
     ],
   },
 ];
-
-
-console.log(portfolioData);

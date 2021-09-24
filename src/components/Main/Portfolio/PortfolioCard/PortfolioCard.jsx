@@ -1,5 +1,4 @@
 import React from "react";
-import { portfolioData } from "../../../../data/pages/Portfolio/portfolioData";
 import {
   CardContainer,
   CardWrap,
