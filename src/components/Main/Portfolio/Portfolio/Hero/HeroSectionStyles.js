@@ -41,7 +41,9 @@ export const HeroWrap = styled.div`
   }
 `;
 
-export const HeroHeader = styled.h1``;
+export const HeroHeader = styled.h1`
+  text-transform: capitalize;
+`;
 export const HeroSubHeader = styled.p`
   max-width: 25.75rem;
   margin: 1rem;

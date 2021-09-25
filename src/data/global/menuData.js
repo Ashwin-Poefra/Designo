@@ -66,7 +66,7 @@ export const menuData = {
     },
     {
       title: "contact",
-      link: "/portfolio",
+      link: "/contact",
     },
   ],
 };

@@ -9,17 +9,17 @@ import {
 } from "./PortfolioCardStyles";
 import { handleScrollToTop } from "../../../../helpers/Config";
 
-const PortfolioCard = ({ data }) => {
+const PortfolioCard = ({ data, twoColumns }) => {
   return (
     <>
       <CardContainer>
-        <CardWrap>
-          {data.map((portfolio, index) => {
+        <CardWrap twoColumns={twoColumns}>
+          {data && data.map((portfolio, index) => {
             return (
               <Card
                 key={index}
                 className={portfolio.class}
-                to="/about"
+                to={`/services/${portfolio.id}`}
                 onClick={handleScrollToTop}
               >
                 <CardHeader>{portfolio.header}</CardHeader>

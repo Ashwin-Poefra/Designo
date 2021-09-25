@@ -55,6 +55,23 @@ export const CardWrap = styled.div`
       margin: 0rem;
     }
   }
+
+  ${({ twoColumns }) =>
+    twoColumns &&
+    css`
+      @media ${QUERIES.tablet} {
+        display: flex;
+        flex-direction: row;
+
+        & > * {
+          flex: 1;
+          min-height: 19.25rem;
+          margin: 0rem;
+        }
+      }
+
+      
+    `}
 `;
 
 export const Card = styled(Link)`

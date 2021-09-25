@@ -1,6 +1,4 @@
 import React from "react";
-import image from "../../../../../assets/images/app-design/desktop/image-todo.jpg";
-import temp from "../../../../../assets/images/app-design/desktop/image-eyecam.jpg";
 import {
   CardsContainer,
   CardsWrap,
@@ -12,76 +10,24 @@ import {
   CardText,
 } from "./CardsSectionStyles";
 
-const CardsSection = () => {
+const CardsSection = ({ data }) => {
+
   return (
     <CardsContainer>
       <CardsWrap>
-        <Card>
-          <CardImageWrap>
-            <CardImage src={image} alt="sample image" />
-          </CardImageWrap>
-          <CardContent>
-            <CardName>Express</CardName>
-            <CardText>
-              A multi-carrier shipping website for ecommerce businesses
-            </CardText>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardImageWrap>
-            <CardImage src={image} alt="sample image" />
-          </CardImageWrap>
-          <CardContent>
-            <CardName>Express</CardName>
-            <CardText>
-              A multi-carrier shipping website for ecommerce businesses
-            </CardText>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardImageWrap>
-            <CardImage src={image} alt="sample image" />
-          </CardImageWrap>
-          <CardContent>
-            <CardName>Express</CardName>
-            <CardText>
-              A multi-carrier shipping website for ecommerce businesses
-            </CardText>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardImageWrap>
-            <CardImage src={temp} alt="sample image" />
-          </CardImageWrap>
-          <CardContent>
-            <CardName>Express</CardName>
-            <CardText>
-              A multi-carrier shipping website for ecommerce businesses
-            </CardText>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardImageWrap>
-            <CardImage src={image} alt="sample image" />
-          </CardImageWrap>
-          <CardContent>
-            <CardName>Express</CardName>
-            <CardText>
-              A multi-carrier shipping website for ecommerce businesses
-            </CardText>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardImageWrap>
-            <CardImage src={image} alt="sample image" />
-          </CardImageWrap>
-          <CardContent>
-            <CardName>Express</CardName>
-            <CardText>
-              A multi-carrier shipping website for ecommerce businesses
-            </CardText>
-          </CardContent>
-        </Card>
+        {data && data.map((project, index) => {
+          return (
+            <Card key={index}>
+              <CardImageWrap>
+                <CardImage src={project.image} alt={project.imageAlt} />
+              </CardImageWrap>
+              <CardContent>
+                <CardName>{project.name}</CardName>
+                <CardText>{project.description}</CardText>
+              </CardContent>
+            </Card>
+          );
+        })}
       </CardsWrap>
     </CardsContainer>
   );

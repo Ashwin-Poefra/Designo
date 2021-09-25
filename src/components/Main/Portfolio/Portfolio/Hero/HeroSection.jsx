@@ -7,16 +7,13 @@ import {
 } from "./HeroSectionStyles";
 
 
-const HeroSection = () => {
+const HeroSection = ({data}) => {
   return (
     <>
       <HeroContainer>
         <HeroWrap>
-          <HeroHeader>Web Design</HeroHeader>
-          <HeroSubHeader>
-            We build websites that serve as powerful marketing tools and bring
-            memorable brand experiences.
-          </HeroSubHeader>
+          <HeroHeader>{data.header}</HeroHeader>
+          <HeroSubHeader>{data.subHeader}</HeroSubHeader>
         </HeroWrap>
       </HeroContainer>
     </>
