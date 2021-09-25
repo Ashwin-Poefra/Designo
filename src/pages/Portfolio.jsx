@@ -15,7 +15,7 @@ const Portfolio = () => {
       return port.id === id;
     });
     setPortfolio(newPortfolio);
-  }, [portfolioData, id]);
+  }, [id]);
 
   return (
     <>
