@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { QUERIES } from "../../../../helpers/MediaQueries";
+import  bgCircles from "../../../../assets/images/shared/desktop/bg-pattern-two-circles.svg"
 
 export const MapCardContainer = styled.section`
   max-width: 100%;
@@ -29,6 +30,7 @@ export const MapCardContainer = styled.section`
     border-radius: 1rem;
   }
 `;
+
 export const MapCardWrap = styled.div`
   max-width: var(--max-container);
   min-height: 4rem;
@@ -37,7 +39,6 @@ export const MapCardWrap = styled.div`
   justify-content: center;
   flex-direction: column-reverse;
   text-align: center;
-
   & > * {
     flex: 1;
   }
@@ -69,7 +70,10 @@ export const MapContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fdf3f0;
+  background-color: hsl(14, 76%, 97%);
+  background-image: url(${bgCircles});
+  background-repeat: no-repeat;
+  background-position: 0rem 1rem;
 
   @media ${QUERIES.tabletMini} {
     border-radius: 1rem;
@@ -85,6 +89,7 @@ export const MapContentHeader = styled.h2`
   margin-bottom: 1rem;
 `;
 export const MapContentWrap = styled.div`
+
   @media ${QUERIES.tabletMini} {
     display: flex;
     flex-direction: row;
@@ -137,6 +142,7 @@ export const Map = styled.div`
     flex: 1;
   }
 `;
+
 export const MapFrame = styled.iframe`
   border: none;
 
