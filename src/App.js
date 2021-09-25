@@ -6,7 +6,6 @@ import Footer from "./components/global/Footer/Footer";
 import CtaSection from "./components/global/Cta/CtaSection";
 import { menuData } from "./data/global/menuData";
 import { ctaData } from "./data/global/CtaData";
-import { portfolioData } from "./data/pages/Portfolio/portfolioData";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";

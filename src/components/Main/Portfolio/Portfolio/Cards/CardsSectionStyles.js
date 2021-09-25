@@ -8,18 +8,12 @@ export const CardsContainer = styled.section`
 `;
 export const CardsWrap = styled.div`
   max-width: var(--max-container);
-  min-height: 40rem;
+  min-height: 0rem;
   margin: var(--center-container);
   background-color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
-
-  /* &::after {
-    content: "";
-    flex: auto;
-  } */
 `;
 export const Card = styled.div`
   flex: 1 23.1483rem;
@@ -45,7 +39,7 @@ export const Card = styled.div`
   @media ${QUERIES.tablet} {
     flex: 1 23.1483rem;
     max-width: 22rem;
-    min-height: 29.875rem;
+    height: 29.875rem;
     flex-direction: column;
   }
 
@@ -63,6 +57,7 @@ export const CardImageWrap = styled.div`
   height: 20rem;
 `;
 export const CardImage = styled.img`
+  width: 100%;
   border-radius: 1rem 1rem 0rem 0rem;
   object-fit: cover;
 
