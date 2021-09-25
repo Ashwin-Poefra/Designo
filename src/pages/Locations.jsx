@@ -1,14 +1,16 @@
 import React from "react";
 import { Main } from "../global/GlobalStyles";
+import MapCard from "../components/Main/Location/MapCard/MapCard";
 
-
-const Locations = () => {
+const Locations = ({ data }) => {
   return (
-    <div>
+    <>
       <Main>
-        <h1>Locations Page</h1>
+        <MapCard data={data.canada} />
+        <MapCard data={data.australia} reverse/>
+        <MapCard data={data.uk} />
       </Main>
-    </div>
+    </>
   );
 };
 

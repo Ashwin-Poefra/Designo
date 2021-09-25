@@ -6,6 +6,7 @@ import Footer from "./components/global/Footer/Footer";
 import CtaSection from "./components/global/Cta/CtaSection";
 import { menuData } from "./data/global/menuData";
 import { ctaData } from "./data/global/CtaData";
+import { locationData } from "./data/pages/Location/LocationData";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -25,7 +26,7 @@ const App = () => {
           <About />
         </Route>
         <Route exact path="/locations">
-          <Locations />
+          <Locations data={locationData} />
         </Route>
         <Route exact path="/contact">
           <Contact />

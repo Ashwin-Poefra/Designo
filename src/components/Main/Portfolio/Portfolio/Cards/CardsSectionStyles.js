@@ -16,7 +16,7 @@ export const CardsWrap = styled.div`
   justify-content: center;
 `;
 export const Card = styled.div`
-  flex: 1 23.1483rem;
+  flex: 0 1 23.1483rem;
   max-width: 22rem;
   min-height: 29.875rem;
   background-color: var(--color-sec-300);
