@@ -14,6 +14,10 @@ export const CardsWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media ${QUERIES.desktop} {
+    justify-content: flex-start;
+  }
 `;
 export const Card = styled.div`
   flex: 0 1 23.1483rem;
@@ -36,7 +40,7 @@ export const Card = styled.div`
     flex-direction: row;
   }
 
-  @media ${QUERIES.tablet} {
+  @media ${QUERIES.desktop} {
     flex: 1 23.1483rem;
     max-width: 22rem;
     height: 29.875rem;
@@ -66,7 +70,7 @@ export const CardImage = styled.img`
     border-radius: 1rem 0rem 0rem 1rem;
   }
 
-  @media ${QUERIES.tablet} {
+  @media ${QUERIES.desktop} {
     height: 20rem;
     border-radius: 1rem 1rem 0rem 0rem;
   }

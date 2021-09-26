@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Main } from "../global/GlobalStyles";
+import { Main, HiddenHeader } from "../global/GlobalStyles";
 import ContentCard from "../components/Main/About/ContentCard/ContentCard";
 import LocationList from "../components/Main/Location/LocationList/LocationList";
 import { locationListData } from "../data/pages/Location/LocationData";
@@ -16,6 +16,7 @@ const About = ({ data }) => {
         />
       </Helmet>
       <Main>
+        <HiddenHeader>About Us</HiddenHeader>
         {data && <ContentCard data={data.sectionOne} />}
         {data && <ContentCard reverse light gap data={data.sectionTwo} />}
         <LocationList data={locationListData} />

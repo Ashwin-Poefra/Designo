@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Main } from "../global/GlobalStyles";
+import { Main, HiddenHeader } from "../global/GlobalStyles";
 import MapCard from "../components/Main/Location/MapCard/MapCard";
 
 const Locations = ({ data }) => {
@@ -14,6 +14,7 @@ const Locations = ({ data }) => {
         />
       </Helmet>
       <Main>
+        <HiddenHeader>Locate Our Offices</HiddenHeader>
         <MapCard data={data.canada} />
         <MapCard data={data.australia} reverse />
         <MapCard data={data.uk} />

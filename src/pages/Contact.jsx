@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Main } from "../global/GlobalStyles";
+import { Main, HiddenHeader } from "../global/GlobalStyles";
 import LocationList from "../components/Main/Location/LocationList/LocationList";
 import { locationListData } from "../data/pages/Location/LocationData";
 
@@ -15,7 +15,7 @@ const Contact = () => {
         />
       </Helmet>
       <Main>
-        <h1>Contact Page</h1>
+        <HiddenHeader>Contact Us</HiddenHeader>
         <LocationList data={locationListData} />
       </Main>
     </>
