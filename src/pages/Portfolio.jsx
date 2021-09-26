@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { Main } from "../global/GlobalStyles";
 import { portfolioData } from "../data/pages/Portfolio/portfolioData";
@@ -19,6 +20,10 @@ const Portfolio = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{portfolio.title}</title>
+        <meta name="description" content={portfolio.metaDescription} />
+      </Helmet>
       <Main>
         <HeroSection data={portfolio} />
         <CardsSection data={portfolio.projects} />
