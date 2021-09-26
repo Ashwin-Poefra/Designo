@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { QUERIES } from "../../../../helpers/MediaQueries";
+import bgCircle from "../../../../assets/images/shared/desktop/bg-pattern-small-circle.svg";
 
 export const ListContainer = styled.section`
   max-width: 100%;
@@ -29,7 +30,7 @@ export const ListWrap = styled.div`
   }
 `;
 export const List = styled.div`
-  min-height: 22rem;
+  min-height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +44,13 @@ export const ListImageWrap = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 15rem;
+  background-image: url(${bgCircle});
+  background-repeat: no-repeat;
+  background-position: 0rem 0rem;
+
+  @media ${QUERIES.tablet} {
+    background-position: 5rem 0rem;
+  }
 `;
 export const ListImage = styled.img``;
 export const ListName = styled.h3`

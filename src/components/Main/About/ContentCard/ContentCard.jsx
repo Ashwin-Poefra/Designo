@@ -16,6 +16,7 @@ const ContentCard = ({reverse, light, gap, data }) => {
     setSize(window.innerWidth);
   };
 
+  //TODO: Monitor the screen size to enable image responsiveness
   useEffect(() => {
     window.addEventListener("resize", checkSize);
     return () => {
