@@ -28,7 +28,7 @@ const ContentCard = ({reverse, light, gap, data }) => {
       {data && (
         <ContentContainer gap={gap}>
           <ContentWrap reverse={reverse} light={light}>
-            <Content>
+            <Content light={light}>
               <ContentHeader>{data.header}</ContentHeader>
               <ContentText>{data.content.p1}</ContentText>
               <ContentText>{data.content.p2}</ContentText>

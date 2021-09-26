@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 import { QUERIES } from "../../../../helpers/MediaQueries";
+import circleBg from "../../../../assets/images/about/desktop/bg-pattern-hero-about-desktop.svg";
+import doubleCircleBg from "../../../../assets/images/shared/desktop/bg-pattern-two-circles.svg";
 
 export const ContentContainer = styled.section`
   max-width: 100%;
@@ -10,11 +12,11 @@ export const ContentContainer = styled.section`
   }
 
   @media ${QUERIES.tablet} {
-    ${
-      ({gap}) => gap && css`
-      margin-top: 2rem; 
-      `
-    }
+    ${({ gap }) =>
+      gap &&
+      css`
+        margin-top: 2rem;
+      `}
   }
 `;
 
@@ -31,6 +33,7 @@ export const ContentWrap = styled.div`
     light &&
     css`
       background-color: #fdf3f0;
+      background-image: none;
 
       h2 {
         color: var(--color-pry-100);
@@ -48,13 +51,12 @@ export const ContentWrap = styled.div`
   @media ${QUERIES.tablet} {
     flex-direction: row;
     text-align: left;
-    min-height: 30rem;
+    min-height: 0rem;
 
     ${({ reverse }) =>
       reverse &&
       css`
         flex-direction: row-reverse;
-        min-height: 636.75px;
 
         img {
           border-radius: 1rem 0rem 0rem 1rem;
@@ -70,16 +72,37 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
+  background-image: url(${circleBg});
+  background-repeat: no-repeat;
+  background-size: 20rem auto;
+  background-position: 3rem -10rem;
 
   @media ${QUERIES.mobile} {
     padding: 3rem 4rem;
+    background-size: 25rem auto;
+    background-position: 3rem -12rem;
   }
 
   @media ${QUERIES.tablet} {
     padding: 3rem 4rem;
     align-items: flex-start;
     flex: 1 40rem;
+    background-size: 40rem auto;
+    background-position: 0rem -10rem;
   }
+
+  ${({ light }) =>
+    light &&
+    css`
+      background-image: url(${doubleCircleBg});
+      background-repeat: no-repeat;
+      background-position: 0rem 1rem;
+      background-size: 36.5rem auto;
+
+      @media ${QUERIES.tablet} {
+        background-position: 0rem 22rem;
+      }
+    `}
 `;
 
 export const ContentHeader = styled.h2`
@@ -97,12 +120,11 @@ export const ContentText = styled.p`
 
 export const ContentImageWrap = styled.div`
   display: flex;
-  height: 20rem;
+  max-height: 20rem;
 
   @media ${QUERIES.tablet} {
-    min-height: 0rem;
     flex-direction: column;
-    height: 30rem;
+    max-height: none;
   }
 
   & > * {
