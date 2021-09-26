@@ -21,6 +21,7 @@ export const ButtonContainer = styled(Link)`
   &:hover {
     transition: var(--transition);
     background-color: var(--color-sec-100);
+    color: var(--color-pry-300);
   }
 
   ${({ primary }) =>

@@ -18,7 +18,7 @@ import {
 const MapCard = ({data, reverse}) => {
   return (
     <>
-      <MapCardContainer>
+      <MapCardContainer id={`#${data.id}`}>
         <MapCardWrap reverse={reverse}>
           <MapContent>
             <Wrap>
@@ -34,7 +34,9 @@ const MapCard = ({data, reverse}) => {
                   <Contact href={`tel:${data.contact.phone}`}>
                     P: {data.contact.phone}
                   </Contact>
-                  <Contact href={`mailto:${data.contact.mail}`}>M: {data.contact.mail}</Contact>
+                  <Contact href={`mailto:${data.contact.mail}`}>
+                    M: {data.contact.mail}
+                  </Contact>
                 </MapContentContainer>
               </MapContentWrap>
             </Wrap>

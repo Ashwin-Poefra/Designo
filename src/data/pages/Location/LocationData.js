@@ -1,6 +1,31 @@
+import CanadaImage from "../../../assets/images/shared/desktop/illustration-canada.svg";
+import AustraliaImage from "../../../assets/images/shared/desktop/illustration-australia.svg";
+import UkImage from "../../../assets/images/shared/desktop/illustration-united-kingdom.svg";
+
+export const locationListData = [
+  {
+    country: "Canada",
+    image: CanadaImage,
+    anchorLink: "locations#canada",
+  },
+  {
+    country: "Australia",
+    image: AustraliaImage,
+    anchorLink: "locations#australia",
+  },
+  {
+    country: "United Kingdom",
+    image: UkImage,
+    anchorLink: "locations#united-kingdom",
+  },
+];
+
 export const locationData = {
   canada: {
+    id: "canada",
     country: "Canada",
+    image: CanadaImage,
+    anchorLink: "",
     address: {
       office: "Designo Central Office",
       street: "3886 Wellington Street",
@@ -16,7 +41,10 @@ export const locationData = {
     },
   },
   australia: {
+    id: "australia",
     country: "Australia",
+    image: AustraliaImage,
+    anchorLink: "",
     address: {
       office: "Designo AU Office",
       street: "19 Balonne Street",
@@ -32,7 +60,10 @@ export const locationData = {
     },
   },
   uk: {
+    id: "united-kingdom",
     country: "United Kingdom",
+    image: UkImage,
+    anchorLink: "",
     address: {
       office: "Designo UK Office",
       street: "13  Colorado Way",
