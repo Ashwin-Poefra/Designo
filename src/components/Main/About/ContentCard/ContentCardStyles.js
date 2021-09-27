@@ -84,7 +84,6 @@ export const Content = styled.div`
   }
 
   @media ${QUERIES.tablet} {
-    padding: 3rem 4rem;
     align-items: flex-start;
     flex: 1 40rem;
     background-size: 40rem auto;

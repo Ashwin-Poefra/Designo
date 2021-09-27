@@ -22,6 +22,7 @@ export const ButtonContainer = styled(Link)`
     transition: var(--transition);
     background-color: var(--color-sec-100);
     color: var(--color-pry-300);
+    border: none;
   }
 
   ${({ primary }) =>
@@ -34,5 +35,15 @@ export const ButtonContainer = styled(Link)`
         color: var(--color-pry-300);
         border: none;
       }
+    `}
+
+  ${({ fixed }) =>
+    fixed &&
+    css`
+      padding: 0rem;
+      width: 9.5rem;
+      height: 3.5rem;
+      display: grid;
+      place-items: center;
     `}
 `;
