@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Main, HiddenHeader } from "../global/GlobalStyles";
+import { Main } from "../global/GlobalStyles";
 import ContactCard from "../components/Main/Contact/ContactCard/ContactCard";
 import LocationList from "../components/Main/Location/LocationList/LocationList";
 import { locationListData } from "../data/pages/Location/LocationData";
