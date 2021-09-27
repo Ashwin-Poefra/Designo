@@ -39,17 +39,17 @@ const Header = ({ data }) => {
       <HeaderContainer className="header">
         <HeaderWrap>
           <HeaderLogoWrap>
-            <HeaderLogoLink to={data.homeLink}>
+            <HeaderLogoLink to={data.homeLink} aria-label={data.header.label}>
               <HeaderLogo
                 src={data.header.headerLogo}
-                alt={data.header.headLogoAlt}
+                alt={data.header.headerLogoAlt}
                 onClick={handleMenuClick}
               ></HeaderLogo>
             </HeaderLogoLink>
           </HeaderLogoWrap>
           <HeaderMenu>
             <HeaderMobileNav>
-              <MobileNav onClick={handleNavOpen}>
+              <MobileNav onClick={handleNavOpen} aria-label="toggle mobile menu">
                 {navOpen ? (
                   <i className="fas fa-times"></i>
                 ) : (
@@ -64,6 +64,7 @@ const Header = ({ data }) => {
                     key={index}
                     to={menu.link}
                     onClick={handleMenuClick}
+                    aria-label={menu.label}
                   >
                     {menu.title}
                   </HeaderMenuItem>

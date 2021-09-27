@@ -24,6 +24,7 @@ const HeroSection = ({ data }) => {
               click={handleScrollToTop}
               primary="true"
               link={data.button.link}
+              label={data.button.label}
             >
               {data.button.title}
             </Button>

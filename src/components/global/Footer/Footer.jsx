@@ -27,12 +27,13 @@ const Footer = ({ data, trim }) => {
     <>
       <FooterContainer>
         <FooterWrap>
-          <FooterSpace trim={trim}/>
+          <FooterSpace trim={trim} />
           <FooterMenu>
             <FooterLogoWrap>
               <FooterLogoLink
                 to={data.homeLink}
                 onClick={handleScrollToTop}
+                aria-label={data.footer.label}
               >
                 <FooterLogo
                   src={data.footer.footerLogo}
@@ -44,7 +45,11 @@ const Footer = ({ data, trim }) => {
               {data.menu.map((menu, index) => {
                 return (
                   <FooterNav key={index}>
-                    <FooterNavItem to={menu.link} onClick={handleScrollToTop}>
+                    <FooterNavItem
+                      to={menu.link}
+                      onClick={handleScrollToTop}
+                      aria-label={menu.label}
+                    >
                       {menu.title}
                     </FooterNavItem>
                   </FooterNav>
@@ -60,10 +65,16 @@ const Footer = ({ data, trim }) => {
             </FooterAddressWrap>
             <FooterContactWrap>
               <FooterContactTitle>{data.contact.title}</FooterContactTitle>
-              <FooterContact href={data.contact.phoneLink}>
+              <FooterContact
+                href={data.contact.phoneLink}
+                aria-label={data.contact.phoneLabel}
+              >
                 P: {data.contact.phone}
               </FooterContact>
-              <FooterContact href={data.contact.emailLink}>
+              <FooterContact
+                href={data.contact.emailLink}
+                aria-label={data.contact.emailLabel}
+              >
                 M: {data.contact.email}
               </FooterContact>
             </FooterContactWrap>
@@ -74,6 +85,7 @@ const Footer = ({ data, trim }) => {
                     key={index}
                     href={social.link}
                     target="_blank"
+                    rel="noopener"
                     aria-label={social.label}
                   >
                     <Social src={social.icon} alt={social.label}></Social>

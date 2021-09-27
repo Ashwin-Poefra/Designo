@@ -10,10 +10,12 @@ export const menuData = {
   header: {
     headerLogo: logoDark,
     headerLogoAlt: "designo web agency",
+    label: "visit homepage",
   },
   footer: {
     footerLogo: logoLight,
     footerLogoAlt: "designo",
+    label: "go back to homepage",
   },
   homeLink: "/",
   address: {
@@ -25,32 +27,34 @@ export const menuData = {
     title: "Contact Us (Central Office)",
     phone: "+1 253-863-8967",
     phoneLink: "tel:+1 253-863-8967",
+    phoneLabel: "call us via our official number",
     email: "contact@designo.co",
     emailLink: "mailto:contact@designo.co",
+    emailLabel: "send us an email"
   },
   social: [
     {
-      label: "facebook",
+      label: "follow us on facebook",
       icon: facebook,
       link: "https://facebook.com.designo",
     },
     {
-      label: "youtube",
+      label: "subscribe to our youtube channel",
       icon: youtube,
       link: "https://youtube.com.designo",
     },
     {
-      label: "twitter",
+      label: "follow us on twitter",
       icon: twitter,
       link: "https://twitter.com.designo",
     },
     {
-      label: "pinterest",
+      label: "join us on pinterest",
       icon: pinterest,
       link: "https://pinterest.com.designo",
     },
     {
-      label: "instagram",
+      label: "follow us on instagram",
       icon: instagram,
       link: "https://instagram.com.designo",
     },
@@ -59,14 +63,17 @@ export const menuData = {
     {
       title: "our company",
       link: "/about",
+      label: "visit about page",
     },
     {
       title: "locations",
       link: "/locations",
+      label: "visit locations page",
     },
     {
       title: "contact",
       link: "/contact",
+      label: "visit contact page",
     },
   ],
 };

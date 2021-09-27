@@ -21,6 +21,7 @@ const PortfolioCard = ({ data, twoColumns }) => {
                 className={portfolio.class}
                 to={`/services/${portfolio.id}`}
                 onClick={handleScrollToTop}
+                aria-label={portfolio.label}
               >
                 <CardHeader>{portfolio.header}</CardHeader>
                 <CardCta>

@@ -12,6 +12,7 @@ export const homeData = {
   button: {
     title: "learn more",
     link: "/about",
+    label: "visit our about page to learn more"
   },
   image: {
     srcMobile: phoneMobile,

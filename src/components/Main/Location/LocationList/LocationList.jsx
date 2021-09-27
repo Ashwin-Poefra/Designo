@@ -15,7 +15,7 @@ const LocationList = ({ data }) => {
                     </ListImageWrap>
                     <ListName>{list.country}</ListName>
                     <ListButton>
-                      <Button link={list.anchorLink}>see location</Button>
+                      <Button link={list.anchorLink} label={list.label}>see location</Button>
                     </ListButton>
                   </List>
                 ); 

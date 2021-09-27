@@ -26,6 +26,7 @@ export const portfolioData = [
     imageAlt: "a web app on a desktop",
     cta: "view projects",
     class: "large",
+    label: "explore our web design projects",
     title: "Web Design - We Design Web Applications",
     metaDescription:
       "Explore our web applictions. We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
@@ -100,6 +101,7 @@ export const portfolioData = [
     imageAlt: "a mobile phone",
     cta: "view projects",
     class: "small-1",
+    label: "explore our app design projects",
     title: "App Design - We Design Mobile Applications",
     metaDescription:
       "Explore our mobile applictions. Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
@@ -166,9 +168,10 @@ export const portfolioData = [
     imageAlt: "a beautiful design",
     cta: "view projects",
     class: "small-2",
+    label: "explore our graphic design projects",
     title: "Graphics Design - We Design Beautiful Graphics",
     metaDescription:
-      "Explore our graphics designs. We deliver eye-catching branding materials that are tailored to meet your business objectives.",
+      "Explore our graphic designs. We deliver eye-catching branding materials that are tailored to meet your business objectives.",
     projects: [
       {
         image: timBrown,

@@ -20,10 +20,16 @@ export const Form = styled.form`
     &:focus {
       outline: none;
     }
+
+    &::placeholder {
+      color: var(--color-sec-300);
+      letter-spacing: 0.1rem;
+    }
   }
 `;
 
-export const FormInput = styled.div``;
+export const FormInput = styled.div`
+`;
 export const FormMessage = styled.div`
   input {
     min-height: 7.9375rem;
