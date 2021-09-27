@@ -22,12 +22,12 @@ import {
 } from "./FooterStyles";
 import { handleScrollToTop } from "../../../helpers/Config";
 
-const Footer = ({ data }) => {
+const Footer = ({ data, trim }) => {
   return (
     <>
       <FooterContainer>
         <FooterWrap>
-          <FooterSpace />
+          <FooterSpace trim={trim}/>
           <FooterMenu>
             <FooterLogoWrap>
               <FooterLogoLink

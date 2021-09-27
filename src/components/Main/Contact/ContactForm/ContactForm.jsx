@@ -5,8 +5,8 @@ import {
   FormMessage,
   HiddenLabel,
   FormButtonWrap,
+  FormButton
 } from "./ContactFormStyles";
-import Button from "../../../global/Button/Button";
 
 const ContactForm = () => {
   return (
@@ -42,9 +42,12 @@ const ContactForm = () => {
           />
         </FormMessage>
         <FormButtonWrap>
-          <Button primary fixed>
+          <FormButton>
+            submit
+          </FormButton>
+          {/* <Button primary fixed>
             SUBMIT
-          </Button>
+          </Button> */}
         </FormButtonWrap>
       </Form>
     </>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { QUERIES } from "../../../helpers/MediaQueries";
 
@@ -40,6 +40,12 @@ export const FooterWrap = styled.div`
 export const FooterSpace = styled.div`
   min-height: 6.25rem;
   max-width: 100%;
+
+  ${({ trim }) =>
+    trim &&
+    css`
+      display: none;
+    `}
 `;
 
 export const FooterMenu = styled.div`

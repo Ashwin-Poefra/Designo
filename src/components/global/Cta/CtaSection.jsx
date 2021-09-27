@@ -14,7 +14,7 @@ import { handleScrollToTop } from "../../../helpers/Config";
 const CtaSection = ({ data }) => {
   return (
     <>
-      <CtaContainer>
+      <CtaContainer id="cta-container">
         <CtaWrap>
           <CtaContent>
             <CtaHeader>{data.header}</CtaHeader>

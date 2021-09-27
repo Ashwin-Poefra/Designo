@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GlobalStyles } from "./global/GlobalStyles";
 import Header from "./components/global/Header/Header";
 import Footer from "./components/global/Footer/Footer";
-import CtaSection from "./components/global/Cta/CtaSection";
 import { menuData } from "./data/global/menuData";
-import { ctaData } from "./data/global/CtaData";
 import { locationData } from "./data/pages/Location/LocationData";
 import { aboutData } from "./data/pages/About/AboutData";
 import Home from "./pages/Home";
@@ -34,7 +32,6 @@ const App = () => {
         </Route>
         <Route path="/services/:id" children={<Portfolio />}></Route>
       </Switch>
-      <CtaSection data={ctaData} />
       <Footer data={menuData} />
     </Router>
   );

@@ -1,5 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import { QUERIES } from "../helpers/MediaQueries";
+import bgImage from "../assets/images/shared/desktop/bg-pattern-leaf.svg";
 
 export const GlobalStyles = createGlobalStyle`
     ///////////////////////////////////////////////////////
@@ -100,6 +101,20 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Main = styled.main`
+  @media ${QUERIES.tablet} {
+    background-image: url(${bgImage});
+    background-repeat: no-repeat;
+    background-position: 0rem 20rem;
+
+    ${({ adjustBg }) =>
+      adjustBg &&
+      css`
+        background-position: 0rem 8rem;
+      `}
+  }
+  @media ${QUERIES.megaDesktop} {
+    background-image: none;
+  }
 `;
 
 export const HiddenHeader = styled.h1`

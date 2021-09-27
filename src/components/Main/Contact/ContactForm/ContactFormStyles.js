@@ -18,7 +18,7 @@ export const Form = styled.form`
     border-bottom: 0.1rem solid var(--color-pry-300);
 
     &:focus {
-        outline: none;
+      outline: none;
     }
   }
 `;
@@ -37,6 +37,29 @@ export const FormButtonWrap = styled.div`
 
   @media ${QUERIES.tabletMini} {
     justify-content: flex-end;
+  }
+`;
+
+export const FormButton = styled.button`
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-200);
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  width: 9.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-pry-300);
+  color: var(--color-pry-200);
+
+  &:hover {
+    transition: var(--transition);
+    background-color: var(--color-sec-100);
+    color: var(--color-pry-300);
+    border: none;
   }
 `;
 

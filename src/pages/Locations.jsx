@@ -1,7 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Main, HiddenHeader } from "../global/GlobalStyles";
+import { HiddenHeader } from "../global/GlobalStyles";
 import MapCard from "../components/Main/Location/MapCard/MapCard";
+import CtaSection from "../components/global/Cta/CtaSection";
+import { ctaData } from "../data/global/CtaData";
 
 const Locations = ({ data }) => {
   return (
@@ -13,12 +15,13 @@ const Locations = ({ data }) => {
           content="Designo has offices in major cities around the world. Feel free to contact any of our offices to start your project."
         />
       </Helmet>
-      <Main>
+      <main>
         <HiddenHeader>Locate Our Offices</HiddenHeader>
         <MapCard data={data.canada} />
         <MapCard data={data.australia} reverse />
         <MapCard data={data.uk} />
-      </Main>
+        <CtaSection data={ctaData} />
+      </main>
     </>
   );
 };
