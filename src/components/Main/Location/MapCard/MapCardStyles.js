@@ -129,6 +129,7 @@ export const Map = styled.div`
   max-width: 100%;
   min-height: 20rem;
   display: flex;
+  background-color: var(--color-pry-100);
 
   @media ${QUERIES.tabletMini} {
     border-radius: 1rem;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import {
   Form,
   FormInput,
@@ -6,9 +6,11 @@ import {
   HiddenLabel,
   FormButtonWrap,
   FormButton,
+  Error,
 } from "./ContactFormStyles";
 
 const ContactForm = () => {
+  const [formError, setFormError] = useState(false);
   const [formInput, setFormInput] = useState({
     name: "",
     email: "",
@@ -23,6 +25,12 @@ const ContactForm = () => {
     setFormInput({ ...formInput, [name]: value });
   };
 
+  // useEffect(() => {
+  //   if (!formInput.name) {
+  //     setFormError(!formError);
+  //   }
+  // }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,8 +40,10 @@ const ContactForm = () => {
       formInput.phone &&
       formInput.message
     ) {
+      setFormError(false);
       console.log(`Form Complete`);
     } else {
+      setFormError(true);
       console.log(`Form Incomplete`);
     }
   };
@@ -52,7 +62,16 @@ const ContactForm = () => {
             placeholder="Name"
             value={formInput.name}
             onChange={handleChange}
+            error={formError}
           />
+          <Error error={formError}>
+            <p>
+              Can't be empty{" "}
+              <span>
+                <i class="fas fa-exclamation-circle"></i>
+              </span>
+            </p>
+          </Error>
         </FormInput>
         <FormInput>
           <HiddenLabel htmlFor="email">Enter your email address</HiddenLabel>
@@ -63,7 +82,16 @@ const ContactForm = () => {
             placeholder="Email Address"
             value={formInput.email}
             onChange={handleChange}
+            error={formError}
           />
+          <Error error={formError}>
+            <p>
+              Can't be empty{" "}
+              <span>
+                <i class="fas fa-exclamation-circle"></i>
+              </span>
+            </p>
+          </Error>
         </FormInput>
         <FormInput>
           <HiddenLabel htmlFor="phone">Enter your phone number</HiddenLabel>
@@ -74,7 +102,16 @@ const ContactForm = () => {
             placeholder="Phone"
             value={formInput.phone}
             onChange={handleChange}
+            error={formError}
           />
+          <Error error={formError}>
+            <p>
+              Can't be empty{" "}
+              <span>
+                <i class="fas fa-exclamation-circle"></i>
+              </span>
+            </p>
+          </Error>
         </FormInput>
         <FormMessage>
           <HiddenLabel htmlFor="message">Type your message</HiddenLabel>
