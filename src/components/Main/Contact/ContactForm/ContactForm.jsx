@@ -115,16 +115,13 @@ const ContactForm = () => {
         </FormInput>
         <FormMessage>
           <HiddenLabel htmlFor="message">Type your message</HiddenLabel>
-          <input
-            type="text"
+          <textarea
             name="message"
             id="message"
-            placeholder="Your Message"
-            rows="4"
-            cols="50"
+            placeholder="Message"
             value={formInput.message}
             onChange={handleChange}
-          />
+          ></textarea>
         </FormMessage>
         <FormButtonWrap>
           <FormButton onClick={handleSubmit}>submit</FormButton>

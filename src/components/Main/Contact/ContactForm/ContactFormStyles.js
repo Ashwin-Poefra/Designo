@@ -15,8 +15,12 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--color-pry-300);
     font-weight: var(--font-weight-200);
+    font-family: var(--font-pry-100);
 
     &:focus {
+      outline: none;
+    }
+    &:active {
       outline: none;
     }
 
@@ -62,8 +66,22 @@ export const Error = styled.div`
 
 export const FormMessage = styled.div`
   border-bottom: 0.1rem solid var(--color-pry-300);
-  input {
+  textarea {
     min-height: 7.9375rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--color-pry-300);
+    letter-spacing: 0.1rem;
+    font-family: var(--font-pry-100);
+
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
   }
 `;
 
@@ -86,17 +104,23 @@ export const FormButton = styled.button`
   letter-spacing: 0.1rem;
   cursor: pointer;
   width: 9.5rem;
-  height: 3.5rem;
+  height: 3rem;
   display: grid;
   place-items: center;
   background-color: var(--color-pry-300);
   color: var(--color-pry-200);
+  font-family: var(--font-pry-100);
 
   &:hover {
     transition: var(--transition);
     background-color: var(--color-sec-100);
     color: var(--color-pry-300);
     border: none;
+  }
+
+  @media ${QUERIES.tablet} {
+    width: 9.5rem;
+    height: 3.5rem;
   }
 `;
 

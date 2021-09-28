@@ -45,7 +45,7 @@ const Error = () => {
         <Header>404</Header>
         <SubHeader>page not found!</SubHeader>
         <Text>
-          Go back to the <RedirectLink to="/">Homepage</RedirectLink>
+          Go back to the <RedirectLink to="/" aria-label="link to homepage">Homepage</RedirectLink>
         </Text>
       </Container>
       <CtaSection data={ctaData} />
