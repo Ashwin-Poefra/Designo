@@ -11,7 +11,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
 import Portfolio from "./pages/Portfolio";
+import Error from "./pages/Error";
 import ScrollToTop from "./helpers/ScrollToTop";
+
 
 const App = () => {
   return (
@@ -33,6 +35,9 @@ const App = () => {
           <Contact />
         </Route>
         <Route path="/services/:id" children={<Portfolio />}></Route>
+        <Route exact path="*">
+          <Error />
+        </Route>
       </Switch>
       <Footer data={menuData} />
     </Router>
