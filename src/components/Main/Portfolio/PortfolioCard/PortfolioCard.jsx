@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardCta,
 } from "./PortfolioCardStyles";
-import { handleScrollToTop } from "../../../../helpers/Config";
 
 const PortfolioCard = ({ data, twoColumns }) => {
   return (
@@ -20,7 +19,6 @@ const PortfolioCard = ({ data, twoColumns }) => {
                 key={index}
                 className={portfolio.class}
                 to={`/services/${portfolio.id}`}
-                onClick={handleScrollToTop}
                 aria-label={portfolio.label}
               >
                 <CardHeader>{portfolio.header}</CardHeader>

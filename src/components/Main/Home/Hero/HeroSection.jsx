@@ -10,7 +10,6 @@ import {
   HeroImageDesktop,
 } from "./HeroSectionStyles";
 import Button from "../../../../components/global/Button/Button";
-import { handleScrollToTop } from "../../../../helpers/Config";
 
 const HeroSection = ({ data }) => {
   return (
@@ -21,7 +20,6 @@ const HeroSection = ({ data }) => {
             <HeroHeader>{data.header}</HeroHeader>
             <HeroSubHeader>{data.subHeader}</HeroSubHeader>
             <Button
-              click={handleScrollToTop}
               primary="true"
               link={data.button.link}
               label={data.button.label}

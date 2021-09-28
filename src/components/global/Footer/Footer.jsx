@@ -20,7 +20,6 @@ import {
   FooterSocial,
   Social,
 } from "./FooterStyles";
-import { handleScrollToTop } from "../../../helpers/Config";
 
 const Footer = ({ data, trim }) => {
   return (
@@ -32,7 +31,6 @@ const Footer = ({ data, trim }) => {
             <FooterLogoWrap>
               <FooterLogoLink
                 to={data.homeLink}
-                onClick={handleScrollToTop}
                 aria-label={data.footer.label}
               >
                 <FooterLogo
@@ -47,7 +45,6 @@ const Footer = ({ data, trim }) => {
                   <FooterNav key={index}>
                     <FooterNavItem
                       to={menu.link}
-                      onClick={handleScrollToTop}
                       aria-label={menu.label}
                     >
                       {menu.title}

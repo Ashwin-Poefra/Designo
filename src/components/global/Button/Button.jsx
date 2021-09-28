@@ -1,15 +1,15 @@
 import React from "react";
 import { ButtonContainer } from "./ButtonSyles";
 
-const Button = ({ primary, link, click, fixed, label, children }) => {
+const Button = ({ primary, link, fixed, click, label, children }) => {
   return (
     <>
       <ButtonContainer
-        onClick={click}
         primary={primary}
         to={link}
         fixed={fixed}
         aria-label={label}
+        onClick={click}
       >
         {children}
       </ButtonContainer>

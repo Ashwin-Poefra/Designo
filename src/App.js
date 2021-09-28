@@ -11,18 +11,20 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
 import Portfolio from "./pages/Portfolio";
+import ScrollToTop from "./helpers/ScrollToTop";
 
 const App = () => {
   return (
     <Router>
       <GlobalStyles />
+      <ScrollToTop />
       <Header data={menuData} />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/about">
-          <About data={aboutData}/>
+          <About data={aboutData} />
         </Route>
         <Route exact path="/locations">
           <Locations data={locationData} />

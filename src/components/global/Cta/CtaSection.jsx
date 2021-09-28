@@ -7,9 +7,8 @@ import {
   CtaHeader,
   CtaSubHeader,
   CtaButton,
-  MobileButton
+  MobileButton,
 } from "./CtaSectionStyles";
-import { handleScrollToTop } from "../../../helpers/Config";
 
 const CtaSection = ({ data }) => {
   return (
@@ -23,18 +22,13 @@ const CtaSection = ({ data }) => {
               <Button
                 link={data.button.link}
                 primary="true"
-                click={handleScrollToTop}
               >
                 {data.button.title}
               </Button>
             </MobileButton>
           </CtaContent>
           <CtaButton>
-            <Button
-              link={data.button.link}
-              primary="true"
-              click={handleScrollToTop}
-            >
+            <Button link={data.button.link} primary="true">
               {data.button.title}
             </Button>
           </CtaButton>
