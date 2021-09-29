@@ -31,9 +31,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Home Page](public/screenshots/homepage.png)
-![Portfolio Template ](public/screenshots/app-design.png)
-![About Page](public/screenshots/about.png)
+![Home Page](./public/screenshots/homepage.png)
+![Portfolio Template ](./public/screenshots/app-design.png)
+![About Page](./public/screenshots/about.png)
 
 ### Links
 
