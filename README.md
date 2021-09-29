@@ -1,4 +1,4 @@
-# Designo Software Agency - A Frontend Mentor Solution
+# Designo Software Agency
 
 This is a solution to the [Designo multi-page website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT). Frontend Mentor challenges help you improve your coding skills by building realistic and beautiful projects.
 
@@ -29,15 +29,9 @@ Users should be able to:
 - View all portfolio projects through the dynamically rendered portfolio pages
 - View a 404 page when a wrong link is accessed
 
-### Screenshot
-
-![Home Page](./public/screenshots/homepage.png)
-![Portfolio Template ](./public/screenshots/app-design.png)
-![About Page](./public/screenshots/about.png)
-
 ### Links
 
-- [Live Site URL](https://designo-software-agency.vercel.app/)
+- [Designo Live Link](https://designo-software-agency.vercel.app/)
 
 ## My process
 
@@ -55,9 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-I started this project to practice React, but I soon realized I was writing the same code for every planet, since every page looks the same, and I thought there MUST be a better way. After some research - I found Nextjs. The dynamic paths seem like the solution I was looking for. That also meant a huge refactor of the entire React project.
-
-I relied heavily on the official docs and articles to get it together. I had a lot of questions in development and looking back, I should've asked for help sooner to avoid unnecessary frustration. Nevertheless, quite proud of how the project turned out since it pushed me to add a framework to my arsenal.
+This is a project I worked on to practice react and react routing. It was fun to build because I had the opportunity to experience how to build reusable and scalable web components like a professional despite the challenging design. It was a good learning experience!
 
 ### Continued development
 
@@ -65,9 +57,9 @@ I now understand why they say it can be difficult to add animations in React. Ch
 
 ## Author
 
-- Website - [About Me](https://www.folarin.dev)
-- Frontend Mentor - [@emestabillo](https://www.frontendmentor.io/profile/folathecoder)
-- Twitter - [@emestabillo](https://www.twitter.com/folathecoder)
+- Website - [folarin.dev](https://www.folarin.dev)
+- Frontend Mentor - [@folathecoder](https://www.frontendmentor.io/profile/folathecoder)
+- Twitter - [@folathecoder](https://www.twitter.com/folathecoder)
 - Linked - [Folarin Akinloye](https://linkedin.com/in/akinloye-folarin)
 
 ## Acknowledgments
