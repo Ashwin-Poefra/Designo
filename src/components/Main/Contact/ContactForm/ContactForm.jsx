@@ -52,7 +52,11 @@ const ContactForm = () => {
 
   return (
     <>
-      <Form>
+      <Form
+        action="https://formspree.io/f/xjvjzbnp"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <FormInput>
           <HiddenLabel htmlFor="name">Enter your name</HiddenLabel>
           <input
@@ -124,7 +128,7 @@ const ContactForm = () => {
           ></textarea>
         </FormMessage>
         <FormButtonWrap>
-          <FormButton onClick={handleSubmit}>submit</FormButton>
+          <FormButton onClick={handleSubmit} type="submit">submit</FormButton>
         </FormButtonWrap>
       </Form>
     </>
@@ -132,3 +136,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
