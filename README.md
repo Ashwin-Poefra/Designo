@@ -51,10 +51,6 @@ Users should be able to:
 
 This is a project I worked on to practice react and react routing. It was fun to build because I had the opportunity to experience how to build reusable and scalable web components like a professional despite the challenging design. It was a good learning experience!
 
-### Continued development
-
-I now understand why they say it can be difficult to add animations in React. Changes in state and the DOM make it quite tricky. It's something I'd like to delve in a little more going forward.
-
 ## Author
 
 - Website - [folarin.dev](https://www.folarin.dev)
