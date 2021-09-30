@@ -16,6 +16,10 @@ const ContactForm = () => {
   const { handleChange, handleSubmit, values, errors, isSubmitting } =
     useForm(validateForm);
 
+  setTimeout(() => {
+    console.log("this is the first message");
+  }, 5000);
+
   return (
     <>
       <Form
@@ -23,9 +27,7 @@ const ContactForm = () => {
         method="POST"
         enctype="multipart/form-data"
       >
-        {isSubmitting ? (
-          <Notification>Message Sent!</Notification>
-        ) : null}
+        {isSubmitting ? <Notification>Message Sent!</Notification> : null}
         <FormInput>
           <HiddenLabel htmlFor="name">Enter your name</HiddenLabel>
           <input
