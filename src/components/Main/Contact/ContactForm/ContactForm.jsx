@@ -10,10 +10,10 @@ import {
   FormButton,
   Error,
 } from "./ContactFormStyles";
-// import Notification from "../../../global/Notification/Notification";
+import Notification from "../../../global/Notification/Notification";
 
 const ContactForm = () => {
-  const { handleChange, handleSubmit, values, errors} =
+  const { handleChange, handleSubmit, values, errors, isSubmitting } =
     useForm(validateForm);
 
   return (
@@ -23,7 +23,9 @@ const ContactForm = () => {
         method="POST"
         enctype="multipart/form-data"
       >
-        {/* {isSubmitting === true ? <Notification>Message Sent!</Notification> : null} */}
+        {isSubmitting ? (
+          <Notification>Message Sent!</Notification>
+        ) : null}
         <FormInput>
           <HiddenLabel htmlFor="name">Enter your name</HiddenLabel>
           <input

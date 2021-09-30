@@ -8,8 +8,6 @@ export const validateForm = (values) => {
   //* => Validate Name
   if (!values.name.trim()) {
     errors.name = "Name required!";
-  } else {
-       errors.name = "";
   }
 
   //* => Validate Email

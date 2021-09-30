@@ -52,6 +52,7 @@ export const Error = styled.p`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   color: var(--color-pry-300);
   font-weight: var(--font-weight-200);
   font-size: 0.8rem;
