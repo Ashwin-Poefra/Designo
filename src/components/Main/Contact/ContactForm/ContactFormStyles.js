@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 import { QUERIES } from "../../../../helpers/MediaQueries";
 
 export const Form = styled.form`
-  /* background-color: yellow; */
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -30,11 +29,16 @@ export const Form = styled.form`
       letter-spacing: 0.1rem;
     }
 
+    select:focus {
+      background-color: transparent;
+      outline: none;
+    }
+
     ${({ error }) =>
       error &&
       css`
         width: 40%;
-      `}
+      `};
   }
 `;
 
@@ -45,7 +49,7 @@ export const FormInput = styled.div`
 `;
 
 export const Error = styled.p`
-  width: 60%;
+  width: 100%;
   display: flex;
   align-items: center;
   color: var(--color-pry-300);
@@ -71,9 +75,13 @@ export const FormMessage = styled.div`
 
     &:focus {
       outline: none;
+      background-color: transparent;
+      color: var(--color-pry-300);
     }
     &:active {
       outline: none;
+      background-color: transparent;
+      color: var(--color-pry-300);
     }
   }
 `;
