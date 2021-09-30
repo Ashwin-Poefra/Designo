@@ -6,6 +6,7 @@ export const Form = styled.form`
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 1rem 0rem;
 
   input {
     width: 100%;
@@ -43,25 +44,17 @@ export const FormInput = styled.div`
   border-bottom: 0.1rem solid var(--color-pry-300);
 `;
 
-export const Error = styled.div`
+export const Error = styled.p`
+  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  text-align: right;
-  display: none;
+  color: var(--color-pry-300);
+  font-weight: var(--font-weight-200);
+  font-size: 0.8rem;
 
-  p {
-    color: var(--color-pry-300);
-    font-size: 0.7rem;
-    letter-spacing: 0.1rem;
+  span {
+    margin-left: 0.5rem;
   }
-
-  ${({ error }) =>
-    error &&
-    css`
-      width: 60%;
-      display: flex;
-    `}
 `;
 
 export const FormMessage = styled.div`

@@ -4,6 +4,7 @@ import ContactCard from "../components/Main/Contact/ContactCard/ContactCard";
 import LocationList from "../components/Main/Location/LocationList/LocationList";
 import { locationListData } from "../data/pages/Location/LocationData";
 
+
 const Contact = () => {
 
   return (

@@ -1,4 +1,6 @@
-import React, { useState} from "react";
+import React from "react";
+import useForm from "../../../../hooks/useForm";
+import { validateForm } from "../../../../helpers/ValidateForm";
 import {
   Form,
   FormInput,
@@ -8,47 +10,11 @@ import {
   FormButton,
   Error,
 } from "./ContactFormStyles";
+// import Notification from "../../../global/Notification/Notification";
 
 const ContactForm = () => {
-  const [formError, setFormError] = useState(false);
-  const [formInput, setFormInput] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  // const [formData, setFormData] = useState({});
-
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setFormInput({ ...formInput, [name]: value });
-  };
-
-  // useEffect(() => {
-  //   if (!formInput.name) {
-  //     setFormError(!formError);
-  //   }
-  // }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (
-      formInput.name &&
-      formInput.email &&
-      formInput.phone &&
-      formInput.message
-    ) {
-      setFormError(false);
-      console.log(`Form Complete`);
-    } else {
-      setFormError(true);
-      console.log(`Form Incomplete`);
-    }
-  };
-
-  console.log(formInput);
+  const { handleChange, handleSubmit, values, errors} =
+    useForm(validateForm);
 
   return (
     <>
@@ -57,6 +23,7 @@ const ContactForm = () => {
         method="POST"
         enctype="multipart/form-data"
       >
+        {/* {isSubmitting === true ? <Notification>Message Sent!</Notification> : null} */}
         <FormInput>
           <HiddenLabel htmlFor="name">Enter your name</HiddenLabel>
           <input
@@ -64,18 +31,17 @@ const ContactForm = () => {
             name="name"
             id="name"
             placeholder="Name"
-            value={formInput.name}
+            value={values.name}
             onChange={handleChange}
-            error={formError}
           />
-          <Error error={formError}>
-            <p>
-              Can't be empty{" "}
+          {errors.name && (
+            <Error>
+              {errors.name}{" "}
               <span>
-                <i class="fas fa-exclamation-circle"></i>
+                <i className="fas fa-exclamation-circle"></i>
               </span>
-            </p>
-          </Error>
+            </Error>
+          )}
         </FormInput>
         <FormInput>
           <HiddenLabel htmlFor="email">Enter your email address</HiddenLabel>
@@ -84,18 +50,17 @@ const ContactForm = () => {
             name="email"
             id="email"
             placeholder="Email Address"
-            value={formInput.email}
+            value={values.email}
             onChange={handleChange}
-            error={formError}
           />
-          <Error error={formError}>
-            <p>
-              Can't be empty{" "}
+          {errors.email && (
+            <Error>
+              {errors.email}{" "}
               <span>
-                <i class="fas fa-exclamation-circle"></i>
+                <i className="fas fa-exclamation-circle"></i>
               </span>
-            </p>
-          </Error>
+            </Error>
+          )}
         </FormInput>
         <FormInput>
           <HiddenLabel htmlFor="phone">Enter your phone number</HiddenLabel>
@@ -104,18 +69,17 @@ const ContactForm = () => {
             name="phone"
             id="phone"
             placeholder="Phone"
-            value={formInput.phone}
+            value={values.phone}
             onChange={handleChange}
-            error={formError}
           />
-          <Error error={formError}>
-            <p>
-              Can't be empty{" "}
+          {errors.phone && (
+            <Error>
+              {errors.phone}{" "}
               <span>
-                <i class="fas fa-exclamation-circle"></i>
+                <i className="fas fa-exclamation-circle"></i>
               </span>
-            </p>
-          </Error>
+            </Error>
+          )}
         </FormInput>
         <FormMessage>
           <HiddenLabel htmlFor="message">Type your message</HiddenLabel>
@@ -123,12 +87,22 @@ const ContactForm = () => {
             name="message"
             id="message"
             placeholder="Message"
-            value={formInput.message}
+            value={values.message}
             onChange={handleChange}
           ></textarea>
+          {errors.message && (
+            <Error>
+              {errors.message}{" "}
+              <span>
+                <i className="fas fa-exclamation-circle"></i>
+              </span>
+            </Error>
+          )}
         </FormMessage>
         <FormButtonWrap>
-          <FormButton onClick={handleSubmit} type="submit">submit</FormButton>
+          <FormButton onClick={handleSubmit} type="submit">
+            submit
+          </FormButton>
         </FormButtonWrap>
       </Form>
     </>
@@ -136,4 +110,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
